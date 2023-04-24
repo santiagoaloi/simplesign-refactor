@@ -5,6 +5,7 @@ export default {
       primary: '#0062f0',
       surface: '#fff',
       error: '#ff4081',
+      secondary: '#0062f0',
       background: '#f0f2f5',
 
       'appbar-background': '#0062f0',
