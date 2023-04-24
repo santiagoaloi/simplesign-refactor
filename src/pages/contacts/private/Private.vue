@@ -12,7 +12,7 @@
             placeholder="Search"
             prepend-inner-icon="$mdiMagnify"
           />
-          <VSpacer></VSpacer>
+          <VSpacer />
           <VBtn class="text-white" color="#29c770"> Bulk Upload</VBtn>
           <VBtn class="text-white" color="#29c770"> Add Contact</VBtn>
         </div>
