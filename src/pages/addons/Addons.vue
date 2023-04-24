@@ -28,7 +28,7 @@
             </div>
 
             <div class="no-scrollbar flex flex-col overflow-auto">
-              <div class="intro-card-wrapper p-4">
+              <div class="addon-card-wrapper p-4">
                 <AddonCard
                   v-for="addon in addons"
                   :key="addon.title"
@@ -388,7 +388,7 @@ const addons = [
 </script>
 
 <style scoped>
-.intro-card-wrapper {
+.addon-card-wrapper {
   @apply grid gap-4 lg:grid-cols-2
 }
 </style>
