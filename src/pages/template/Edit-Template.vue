@@ -1,5 +1,5 @@
 <template>
-  <VContainer fluid>
+  <VContainer>
     <VCard elevation="8" height="800" min-height="800" width="100%">
       <div class="border-b">
         <div class="pa-4 d-flex gap-2">
