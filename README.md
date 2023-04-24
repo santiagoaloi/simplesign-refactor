@@ -4,15 +4,9 @@
 ![Vite](https://img.shields.io/static/v1?style=flat&message=Vite&color=373e47&logo=Vite&logoColor=967cff&label=)
 ![rollup.js](https://img.shields.io/static/v1?style=flat&message=rollup.js&color=373e47&logo=rollup.js&logoColor=fe3333&label=)
 ![Yarn](https://img.shields.io/static/v1?style=flat&message=Yarn&color=373e47&logo=Yarn&logoColor=FFFFFF&label=)
-![Firebase](https://img.shields.io/static/v1?style=flat&message=Firebase&color=373e47&logo=Firebase&logoColor=FFCA28&label=)
-![Google Cloud](https://img.shields.io/static/v1?style=flat&message=Google+Cloud&color=373e47&logo=Google+Cloud&logoColor=FFFFFF&label=)
 ![Vercel](https://img.shields.io/static/v1?style=flat&message=Vercel&color=373e47&logo=Vercel&logoColor=FFFFFF&label=)
 
-# <span style="color: #7d5bed;"> Skriptjôbs</span>
-
-## Code quality
-
-We strive for code quality by having code reviews according to our high standards.
+# <span style="color: #7d5bed;"> Simplesign VueJS/Vuetify Version</span>
 
 ## Git commit specification reference
 
