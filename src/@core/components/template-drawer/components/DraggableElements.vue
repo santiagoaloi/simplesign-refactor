@@ -14,10 +14,10 @@
             <VCard class="border" color="draggable-items" height="50">
               <div class="d-flex align-center justify-center fill-height">
                 <VIcon class="mr-4" icon="$mdiDragVertical" />
-                <VSpacer></VSpacer>
+                <VSpacer />
 
                 <small> {{ element.name }}</small>
-                <VSpacer></VSpacer>
+                <VSpacer />
                 <VIcon class="mr-4" icon="$mdiFormatLetterCaseUpper" />
               </div>
             </VCard>
