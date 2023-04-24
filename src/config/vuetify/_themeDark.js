@@ -5,6 +5,8 @@ export default {
       primary: '#0062f0',
       surface: '#293046',
       error: '#ff4081',
+      secondary: '#d0d2d6',
+
       background: '#151d32',
 
       'appbar-background': '#151d32',
@@ -14,10 +16,12 @@ export default {
       'draggable-items': '#282e44',
 
       'drop-zone': '#2e3750',
-      'drop-zone-border': 'white',
+      'drop:': '#ffff',
+      'drop-zone-border': '#fff',
 
-      'on-surface': '#adbac7',
+      'on-surface': '#c5c7cb',
       'on-surface-variant': '#242B33',
+      'on-drawer': '#b0b2b9',
       'on-navigation-drawer': '#adbac7',
       'on-appbar-background': '#adbac7',
       'on-background': '#adbac7',
@@ -31,7 +35,7 @@ export default {
 
       //Custom vars
       'app-background': '#22272e',
-      'app-typography': '#adbac7',
+      'app-typography': '#0062f0',
 
       'medium-emphasis-opacity': 0.68,
 
