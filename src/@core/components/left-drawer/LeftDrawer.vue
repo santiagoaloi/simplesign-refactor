@@ -7,11 +7,23 @@
             <VImg src="/company_logos/simplesign.svg" width="40" />
 
             <template v-if="!isDark">
-              <VImg class="ml-4" src="/company_logos/simplesign-variant.svg" width="135" />
+              <VImg class="ml-4" src="/company_logos/simplesign-variant.svg" width="135">
+                <template #placeholder>
+                  <div class="d-flex align-center justify-center fill-height">
+                    <VProgressCircular color="grey-lighten-4" indeterminate />
+                  </div>
+                </template>
+              </VImg>
             </template>
 
             <template v-if="isDark">
-              <VImg class="ml-4" src="/company_logos/simplesign-variant-dark.png" width="135" />
+              <VImg class="ml-4" src="/company_logos/simplesign-variant-dark.png" width="135">
+                <template #placeholder>
+                  <div class="d-flex align-center justify-center fill-height">
+                    <VProgressCircular color="grey-lighten-4" indeterminate />
+                  </div>
+                </template>
+              </VImg>
             </template>
           </div>
         </RouterLink>
