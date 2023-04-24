@@ -42,16 +42,4 @@
     just by copying and pasting the list of class names.
     Can only apply tailwind classes.
     */
-
-  .mobile-stores-buttons {
-    @apply inline-flex w-full cursor-pointer items-center justify-center rounded-lg bg-gray-800 px-4 py-2.5 text-white transition-all duration-200 hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-300 active:translate-y-[1.2px] dark:bg-[#252b33] dark:hover:bg-gray-600 dark:focus:ring-gray-700 sm:w-auto;
-  }
-
-  .active-push-down {
-    @apply cursor-pointer shadow-md duration-500 active:translate-y-1 active:shadow-sm active:duration-500;
-  }
-
-  .active-push-down-no-shadow {
-    @apply cursor-pointer transition-all duration-500 active:translate-y-[1.5px] active:duration-500;
-  }
 }
