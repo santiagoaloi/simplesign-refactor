@@ -70,8 +70,7 @@ export default defineConfig({
 
   optimizeDeps: {
     exclude: ['pinia', 'vuetify'],
-    entries: ['./src/**/*.vue'],
-    include: ['sortablejs']
+    entries: ['./src/**/*.vue']
   },
 
   build: {
