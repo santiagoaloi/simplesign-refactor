@@ -34,8 +34,8 @@ const { isOverDropZone } = useDropZone(dropZoneRef, onDrop)
           v-if="!filesData.length"
           class="flex flex-column flex-wrap justify-center items-center h-full"
         >
-          <div class="text-h4 text-primary">Drop files here or click to upload</div>
-          <div class="text-h4 text-primary"><VIcon icon="$mdiTrayArrowDown" /></div>
+          <div class="text-3xl text-secondary">Drop files here or click to upload</div>
+          <div class="text-h4 text-secondary mt-4"><VIcon icon="$mdiTrayArrowDown" /></div>
         </div>
         <div class="flex h-full flex-wrap justify-center items-center">
           <div
