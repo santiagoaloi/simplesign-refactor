@@ -1,0 +1,57 @@
+/**
+ * This injects Tailwind's base styles and any base styles registered by
+ * plugins.
+ */
+@tailwind base;
+
+/**
+ * This injects Tailwind's component classes and any component classes
+ * registered by plugins.
+ */
+@tailwind components;
+
+/**
+ * This injects Tailwind's utility classes and any utility classes registered
+ * by plugins.
+ */
+@tailwind utilities;
+
+/**
+ * Use this directive to control where Tailwind injects the hover, focus,
+ * responsive, dark mode, and other variants of each class.
+ *
+ * If omitted, Tailwind will append these classes to the very end of
+ * your stylesheet by default.
+ */
+@tailwind variants;
+
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  /* Use Tailwind's @apply directive to extract 
+    repeated utility patterns into custom CSS classes 
+    just by copying and pasting the list of class names.
+    Can only apply tailwind classes.
+    */
+
+  .mobile-stores-buttons {
+    @apply inline-flex w-full cursor-pointer items-center justify-center rounded-lg bg-gray-800 px-4 py-2.5 text-white transition-all duration-200 hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-300 active:translate-y-[1.2px] dark:bg-[#252b33] dark:hover:bg-gray-600 dark:focus:ring-gray-700 sm:w-auto;
+  }
+
+  .active-push-down {
+    @apply cursor-pointer shadow-md duration-500 active:translate-y-1 active:shadow-sm active:duration-500;
+  }
+
+  .active-push-down-no-shadow {
+    @apply cursor-pointer transition-all duration-500 active:translate-y-[1.5px] active:duration-500;
+  }
+}
