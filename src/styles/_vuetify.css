@@ -32,26 +32,9 @@ html,
   --v-input-control-height: 25px !important;
 }
 
-.bottom-border {
-  outline: 1px solid rgba(var(--v-border-color), var(--v-border-opacity)) !important;
-}
-
-.top-border {
-  outline: 1px solid rgba(var(--v-border-color), var(--v-border-opacity)) !important;
-}
-
-/* TODO - check --v-border-color existence */
-.right-border {
-  border-right: 1px solid rgba(var(--v-border-color), var(--v-border-opacity)) !important;
-}
-
 .v-field {
   margin-bottom: 5px;
   margin-top: 5px;
-}
-
-.ad-card-lazy {
-  transition-duration: 500ms !important;
 }
 
 .v-card,
