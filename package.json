@@ -1,13 +1,9 @@
 {
   "name": "simplesign-refactor",
-  "description": "Refactor exercese insipired in Angular template",
+  "description": "Refactor exercise insipired in Angular template",
   "version": "1.0.0",
   "private": true,
   "author": "Santiago Aloi <santiagoaloi@gmail.com> (https://github.com/santiagoaloi/)",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Skriptjobs/skriptjobs-cloud.git"
-  },
   "config": {
     "viteConfig": "./vite/vite.config.js"
   },
