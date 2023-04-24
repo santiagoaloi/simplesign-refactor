@@ -65,29 +65,6 @@
         to="/templates"
       />
 
-      <VListGroup>
-        <template #activator="{ props }">
-          <VListItem :ripple="false" v-bind="props" title="Settings">
-            <template #prepend>
-              <VIcon icon="$mdiCog" />
-            </template>
-          </VListItem>
-        </template>
-
-        <VListItem
-          v-for="([title, icon, to], i) in settings"
-          :key="i"
-          :ripple="false"
-          :title="title"
-          :to="to"
-          @click="router.push(to)"
-        >
-          <template #prepend>
-            <VIcon :icon="icon" size="x-small" />
-          </template>
-        </VListItem>
-      </VListGroup>
-
       <VListItem :ripple="false" prepend-icon="$mdiPuzzleOutline" title="Add-Ons" to="/addons" />
     </VList>
   </VNavigationDrawer>
@@ -100,11 +77,6 @@ const router = useRouter()
 const { isDark } = toRefs(useAppStore())
 
 const contacts = [
-  ['Private', '$mdiCircleOutline', '/contacts/Private'],
-  ['Organizations', '$mdiCircleOutline', '/contacts/Organizations']
-]
-
-const settings = [
   ['Private', '$mdiCircleOutline', '/contacts/Private'],
   ['Organizations', '$mdiCircleOutline', '/contacts/Organizations']
 ]
