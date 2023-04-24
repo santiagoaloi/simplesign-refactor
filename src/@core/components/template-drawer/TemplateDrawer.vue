@@ -6,13 +6,7 @@
           <VBtn block class="text-white mb-4" color="#29c770"> Save Changes</VBtn>
 
           <VTabs v-model="tabs" class="border-b" color="primary" density="compact" grow>
-            <VTooltip
-              location="top"
-              offset="5"
-              open-delay="100"
-              text="Recipients"
-              transition="false"
-            >
+            <VTooltip v-bind="{ ...tooltipDefaults }" text="Recipients">
               <template #activator="{ props }">
                 <VTab :value="1" v-bind="props">
                   <VIcon icon="$mdiAccountMultiple" />
@@ -20,7 +14,7 @@
               </template>
             </VTooltip>
 
-            <VTooltip location="top" offset="5" open-delay="100" text="Details" transition="false">
+            <VTooltip text="Details" v-bind="{ ...tooltipDefaults }">
               <template #activator="{ props }">
                 <VTab :value="2" v-bind="props">
                   <VIcon icon="$mdiServer" />
@@ -28,7 +22,7 @@
               </template>
             </VTooltip>
 
-            <VTooltip location="top" offset="5" open-delay="100" text="Content" transition="false">
+            <VTooltip text="Content" v-bind="{ ...tooltipDefaults }">
               <template #activator="{ props }">
                 <VTab :value="3" v-bind="props">
                   <VIcon icon="$mdiPlusCircleOutline" />
@@ -36,7 +30,7 @@
               </template>
             </VTooltip>
 
-            <VTooltip location="top" offset="5" open-delay="100" text="Settings" transition="false">
+            <VTooltip text="Settings" v-bind="{ ...tooltipDefaults }">
               <template #activator="{ props }">
                 <VTab :value="4" v-bind="props"> <VIcon icon="$mdiCog" /> </VTab>
               </template>
@@ -61,11 +55,23 @@ import DraggableElements from './components/DraggableElements.vue'
 import Recipients from './components/Recipients.vue'
 import Details from './components/Details.vue'
 import Settings from './components/Settings.vue'
+
 const route = useRoute()
 const isEditTemplate = computed(() => {
   return route.name === 'Edit-Template'
 })
 
+const tooltipDefaults = {
+  location: 'top',
+  offset: '5',
+  openDelay: '100',
+  transition: 'false'
+}
+
+// Set initial active tab.
+
 const tabs = ref(1)
+
+// Components loaded in tabs. (order matters).
 const elements = [Recipients, Details, DraggableElements, Settings]
 </script>
