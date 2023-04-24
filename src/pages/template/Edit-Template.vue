@@ -53,7 +53,7 @@ function getComponent(componentName) {
   return componentMap[componentName]
 }
 
-// Return a set of binded based on which element is cloned,
+// Return a set of prop bindings based on which element is cloned,
 function getComponentBidings(element) {
   if (element.component === 'VTextField') {
     return {
