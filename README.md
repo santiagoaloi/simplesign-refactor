@@ -6,7 +6,7 @@
 ![Yarn](https://img.shields.io/static/v1?style=flat&message=Yarn&color=373e47&logo=Yarn&logoColor=FFFFFF&label=)
 ![Vercel](https://img.shields.io/static/v1?style=flat&message=Vercel&color=373e47&logo=Vercel&logoColor=FFFFFF&label=)
 
-# <span style="color: #7d5bed;"> Simplesign VueJS/Vuetify Version</span>
+# <span style="color: #7d5bed;"> Simplesign VueJS/Vuetify v3 Version</span>
 
 ## Git commit specification reference
 
@@ -29,10 +29,10 @@
 ```bash
 
 # clone
-git clone https://github.com/Skriptjobs/skriptjobs-cloud.git
+git clone https://github.com/santiagoaloi/simplesign-refactor.git
 
 # enter the project directory
-cd skriptjobs-cloud
+cd simplesign-refactor
 
 # install dependencies
 yarn install
