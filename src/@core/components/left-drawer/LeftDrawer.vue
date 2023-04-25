@@ -62,6 +62,7 @@
           :ripple="false"
           :title="title"
           :to="to"
+          active-color="primary"
           @click="router.push(to)"
         >
           <template #prepend>
@@ -72,12 +73,19 @@
 
       <VListItem
         :ripple="false"
+        active-color="primary"
         prepend-icon="$mdiFileDocumentOutline"
         title="Templates"
         to="/templates"
       />
 
-      <VListItem :ripple="false" prepend-icon="$mdiPuzzleOutline" title="Add-Ons" to="/addons" />
+      <VListItem
+        :ripple="false"
+        active-color="primary"
+        prepend-icon="$mdiPuzzleOutline"
+        title="Add-Ons"
+        to="/addons"
+      />
     </VList>
   </VNavigationDrawer>
 </template>
