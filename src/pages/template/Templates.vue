@@ -93,7 +93,7 @@
                   <div class="d-flex align-center">
                     <div class="d-flex flex-column ml-2">
                       <RouterLink to="/">
-                        <div class="text-primary">{{ item.raw.document }}</div>
+                        <div class="text-secondary">{{ item.raw.document }}</div>
                       </RouterLink>
                       <small>{{ item.raw.timeStamp }}</small>
                     </div>
