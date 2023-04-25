@@ -30,7 +30,7 @@
             </VAvatar>
             <div class="d-flex flex-column ml-2">
               <RouterLink to="/">
-                <div class="text-primary">{{ item.raw.name }}</div>
+                <div class="text-secondary">{{ item.raw.name }}</div>
               </RouterLink>
               <small>{{ item.raw.email }}</small>
             </div>
