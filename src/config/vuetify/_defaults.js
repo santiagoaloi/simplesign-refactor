@@ -51,6 +51,7 @@ export default {
     bgColor: 'text-field-background',
     rows: 3
   },
+
   VAutocomplete: {
     hideDetails: 'auto',
     density: 'comfortable',
@@ -59,9 +60,11 @@ export default {
     bgColor: 'text-field-background',
     menuProps: { contentClass: 'autocomplete-list-bg-color', maxHeight: '200' }
   },
+
   VTooltip: { location: 'bottom' },
 
   VImg: { transition: false },
+
   VNavigationDrawer: {
     color: 'navigation-drawer',
     width: 280,
