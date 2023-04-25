@@ -6,7 +6,14 @@
 ![Yarn](https://img.shields.io/static/v1?style=flat&message=Yarn&color=373e47&logo=Yarn&logoColor=FFFFFF&label=)
 ![Vercel](https://img.shields.io/static/v1?style=flat&message=Vercel&color=373e47&logo=Vercel&logoColor=FFFFFF&label=)
 
-# <span style="color: #7d5bed;"> Simplesign VueJS/Vuetify v3 Version</span>
+<p align="center">
+  <a href="https://simplesign.io/" target="_blank" rel="noopener noreferrer">
+    <img width="180" src="public/company_logos/simplesign_readme.png" alt="Simplesign logo">
+  </a>
+</p>
+<br/>
+
+# <span style="color: #0062f0;"> Simplesign VueJS/Vuetify v3 Version</span>
 
 ## Git commit specification reference
 
