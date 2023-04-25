@@ -3,7 +3,7 @@
     <div class="d-flex fill-height">
       <div class="flex flex-col px-6 py-8 w-full">
         <div class="d-flex flex-column fill-height">
-          <div class="text-h6">
+          <div class="text-h6 text-secondary">
             {{ title }}
           </div>
 
