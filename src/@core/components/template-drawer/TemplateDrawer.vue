@@ -1,66 +1,40 @@
 <template>
   <div>
-    <VNavigationDrawer v-if="isEditTemplate" color="drawer" location="right" order="1" width="390">
+    <VNavigationDrawer color="drawer" location="right" order="1" width="390">
       <template #prepend>
         <div class="pt-3 px-3">
-          <VBtn block class="text-white mb-4" color="#29c770"> Save Changes</VBtn>
+          <VBtn block class="mb-4" color="green-button"> Save Changes</VBtn>
 
-          <VTabs v-model="tabs" class="border-b" color="primary" density="compact" grow>
-            <VTooltip v-bind="{ ...tooltipDefaults }" text="Recipients">
+          <VTabs v-model="activeTab" class="border-b" color="primary" density="compact" grow>
+            <VTooltip
+              v-for="(tabElement, i) in elements"
+              v-bind="{ ...tooltipDefaults }"
+              :key="i"
+              :text="tabElement.tooltip"
+            >
               <template #activator="{ props }">
-                <VTab :value="1" v-bind="props">
-                  <VIcon icon="$mdiAccountMultiple" />
+                <VTab :to="tabElement.to" v-bind="props">
+                  <VIcon :icon="tabElement.icon" />
                 </VTab>
-              </template>
-            </VTooltip>
-
-            <VTooltip text="Details" v-bind="{ ...tooltipDefaults }">
-              <template #activator="{ props }">
-                <VTab :value="2" v-bind="props">
-                  <VIcon icon="$mdiServer" />
-                </VTab>
-              </template>
-            </VTooltip>
-
-            <VTooltip text="Content" v-bind="{ ...tooltipDefaults }">
-              <template #activator="{ props }">
-                <VTab :value="3" v-bind="props">
-                  <VIcon icon="$mdiPlusCircleOutline" />
-                </VTab>
-              </template>
-            </VTooltip>
-
-            <VTooltip text="Settings" v-bind="{ ...tooltipDefaults }">
-              <template #activator="{ props }">
-                <VTab :value="4" v-bind="props"> <VIcon icon="$mdiCog" /> </VTab>
               </template>
             </VTooltip>
           </VTabs>
+
+          <!-- Child routes from Edit-Template will render here -->
+          <RouterView v-slot="{ Component }">
+            <template v-if="Component">
+              <VFadeTransition hide-on-leave>
+                <Component :is="Component" />
+              </VFadeTransition>
+            </template>
+          </RouterView>
         </div>
       </template>
-
-      <VWindow v-model="tabs">
-        <VWindowItem v-for="(tabElement, i) in elements" :key="i" :value="i + 1">
-          <div class="px-3">
-            <Component :is="tabElement" />
-          </div>
-        </VWindowItem>
-      </VWindow>
     </VNavigationDrawer>
   </div>
 </template>
 
 <script setup>
-import DraggableElements from './components/DraggableElements.vue'
-import Recipients from './components/Recipients.vue'
-import Details from './components/Details.vue'
-import Settings from './components/Settings.vue'
-
-const route = useRoute()
-const isEditTemplate = computed(() => {
-  return route.name === 'Edit-Template'
-})
-
 const tooltipDefaults = {
   location: 'top',
   offset: '5',
@@ -68,10 +42,13 @@ const tooltipDefaults = {
   transition: 'false'
 }
 
-// Set initial active tab.
-
-const tabs = ref(1)
-
 // Components loaded in tabs. (order matters).
-const elements = [Recipients, Details, DraggableElements, Settings]
+const elements = [
+  { to: '/edit-template/recipients', icon: '$mdiAccountMultiple', tooltip: 'Recipients' },
+  { to: '/edit-template/details', icon: '$mdiServer', tooltip: 'Details' },
+  { to: '/edit-template/draggableelements', icon: '$mdiPlusCircleOutline', tooltip: 'Content' },
+  { to: '/edit-template/settings', icon: '$mdiCog', tooltip: 'Settings' }
+]
+
+const activeTab = ref(0)
 </script>
