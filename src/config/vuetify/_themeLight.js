@@ -14,6 +14,9 @@ export default {
       'inner-card': '#fbfbfb',
       'draggable-items': '#f6f6f6',
 
+      'green-button': '#29c770',
+      'on-green-button': '#fff',
+
       'on-surface': '#24193B',
       'on-surface-variant': '#F4F5FA',
       'on-text-field-background': '#181027',
