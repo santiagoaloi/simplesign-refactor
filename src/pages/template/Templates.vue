@@ -112,12 +112,14 @@
                           transition="false"
                         >
                           <template #activator="{ props }">
-                            <VAvatar
-                              v-bind="props"
-                              :image="`/avatars/avatar${i + 1}.jpg`"
-                              :size="44"
-                              class="cursor-pointer"
-                            />
+                            <VAvatar v-bind="props" :size="44" class="cursor-pointer">
+                              <VImg :src="`/avatars/avatar${i + 1}.jpg`">
+                                <template #placeholder>
+                                  <div class="d-flex align-center justify-center fill-height">
+                                    <VProgressCircular color="grey-lighten-4" indeterminate />
+                                  </div> </template
+                              ></VImg>
+                            </VAvatar>
                           </template>
                         </VTooltip>
                       </div>
