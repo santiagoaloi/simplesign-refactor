@@ -4,9 +4,7 @@
       <VRow class="fill-height" no-gutters>
         <VCol class="border-r dark:border-slate-700" cols="3">
           <VCardText class="px-7 pt-7">
-            <VBtn block class="text-white" color="#29c770" to="Edit-Template">
-              Add new template</VBtn
-            >
+            <VBtn block color="green-button" to="Edit-Template"> Add new template</VBtn>
 
             <div class="mt-7 d-flex gap-1 cursor-pointer">
               <VIcon icon="$mdiFileDocumentOutline" />
