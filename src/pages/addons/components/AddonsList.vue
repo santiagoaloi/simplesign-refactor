@@ -11,7 +11,10 @@
       />
     </div>
 
-    <div class="no-scrollbar flex flex-col overflow-auto">
+    <div
+      :class="{ 'justify-center': !filteredAddons.length }"
+      class="no-scrollbar flex fill-height align-center flex-col overflow-auto"
+    >
       <div class="addon-card-wrapper p-4">
         <AddonCard
           v-for="addon in filteredAddons"
@@ -20,6 +23,12 @@
           :title="addon.title"
         />
       </div>
+
+      <NotFound
+        v-if="!filteredAddons.length"
+        subtitle="Try a different search query"
+        title="No addons found matching your search"
+      />
     </div>
   </div>
 </template>

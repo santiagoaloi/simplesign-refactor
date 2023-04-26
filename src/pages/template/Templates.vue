@@ -16,7 +16,7 @@
             </div>
 
             <div class="mt-7 d-flex align-center">
-              <div class="text-overline">filters</div>
+              <div class="text-overline neutral-color">filters</div>
               <VSpacer />
 
               <VTooltip
