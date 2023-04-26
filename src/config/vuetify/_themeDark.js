@@ -15,6 +15,9 @@ export default {
       'inner-card': '#293046',
       'draggable-items': '#282e44',
 
+      'green-button': '#29c770',
+      'on-green-button': '#fff',
+
       'drop-zone': '#2e3750',
       'drop:': '#ffff',
       'drop-zone-border': '#fff',
