@@ -13,7 +13,7 @@
             prepend-inner-icon="$mdiMagnify"
           />
           <VSpacer />
-          <VBtn class="text-white" color="#29c770"> Add Organization</VBtn>
+          <VBtn color="green-button"> Add Organization</VBtn>
         </div>
       </VCardText>
       <VDataTable :headers="headers" :items="items" :search="search" hover item-value="name">
