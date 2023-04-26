@@ -1,12 +1,12 @@
 <template>
   <div class="mt-3">
     <div class="my-2">
-      <p class="pl-2">Visible document name</p>
+      <div class="pl-2">Visible document name</div>
       <VTextField placeholder="New Template" />
     </div>
 
     <div class="my-2">
-      <p class="pl-2">User language</p>
+      <div class="pl-2">User language</div>
       <VAutocomplete
         :items="['German', 'Swedish', 'Spanish', 'French']"
         placeholder="Please select"
@@ -16,24 +16,24 @@
     <VDivider class="my-3" />
 
     <div class="my-2">
-      <p class="pl-2">Signing deadline in</p>
+      <div class="pl-2">Signing deadline in</div>
       <VTextField placeholder="-" suffix="days" />
     </div>
 
     <div class="my-2">
-      <p class="pl-2">Signing reminder in</p>
+      <div class="pl-2">Signing reminder in</div>
       <VTextField placeholder="-" suffix="days" />
     </div>
 
     <VDivider class="my-3" />
 
     <div class="my-2">
-      <p class="pl-2">Your imvitation message</p>
+      <div class="pl-2">Your imvitation message</div>
       <VTextarea placeholder="Write your message here" />
     </div>
 
     <div class="my-2">
-      <p class="pl-2">Confirmation message</p>
+      <div class="pl-2">Confirmation message</div>
       <VTextarea placeholder="Write your message here" />
     </div>
 
