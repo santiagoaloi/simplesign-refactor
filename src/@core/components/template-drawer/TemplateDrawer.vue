@@ -19,17 +19,19 @@
               </template>
             </VTooltip>
           </VTabs>
-
-          <!-- Child routes from Edit-Template will render here -->
-          <RouterView v-slot="{ Component }">
-            <template v-if="Component">
-              <VFadeTransition hide-on-leave>
-                <Component :is="Component" />
-              </VFadeTransition>
-            </template>
-          </RouterView>
         </div>
       </template>
+
+      <!-- Child routes from Edit-Template will render here -->
+      <div class="pt-3 px-3">
+        <RouterView v-slot="{ Component }">
+          <template v-if="Component">
+            <VFadeTransition hide-on-leave>
+              <Component :is="Component" />
+            </VFadeTransition>
+          </template>
+        </RouterView>
+      </div>
     </VNavigationDrawer>
   </div>
 </template>
