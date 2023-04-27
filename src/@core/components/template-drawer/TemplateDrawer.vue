@@ -2,7 +2,7 @@
   <VNavigationDrawer color="drawer" location="right" order="1" width="390">
     <template #prepend>
       <div class="pt-3 px-3">
-        <VBtn block class="mb-4" color="green-button"> Save Changes</VBtn>
+        <VBtn block class="mb-4" color="green-button" text="Save Changes" />
 
         <VTabs v-model="activeTab" class="border-b" color="primary" density="compact" grow>
           <VTooltip
