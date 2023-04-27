@@ -34,10 +34,10 @@
 
 <script>
   const themeStore = localStorage.getItem('global-application')
-  const theme = JSON.parse(themeStore).currentTheme
   const htmlElement = document.documentElement
 
-  if (theme) {
+  if (themeStore) {
+    const theme = JSON.parse(themeStore).currentTheme
     htmlElement.classList.add(theme === 'light' ? 'bg-light' : 'bg-dark')
   }
 
