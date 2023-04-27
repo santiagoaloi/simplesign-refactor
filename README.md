@@ -11,9 +11,17 @@
     <img width="180" src="public/company_logos/simplesign_readme.png" alt="Simplesign logo">
   </a>
 </p>
-<br/>
 
 # <span style="color: #0062f0;"> Simplesign VueJS/Vuetify v3 Version</span>
+
+## Cool features ✨
+
+- Light/dark mode toggle
+- 404 Layouts and file based routing
+- Vuetfiy Defaults, icons, themes
+- Pinia Persistence functionality
+- Tabs persistence with routing
+- Table search and addons search functionality
 
 ## Git commit specification reference
 
