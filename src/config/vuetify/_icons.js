@@ -10,6 +10,7 @@ export {
   mdiEmailOutline,
   mdiDotsVertical,
   mdiTrayArrowDown,
+  mdiDragHorizontal,
   mdiDragVertical,
   mdiFileDocumentOutline,
   mdiHomeOutline,
@@ -45,5 +46,9 @@ export {
   mdiFormatClear,
   mdiArrowULeftTop,
   mdiArrowURightTop,
-  mdiLink
+  mdiLink,
+  mdiFormatTextbox,
+  mdiLockOutline,
+  mdiTrashCanOutline,
+  mdiContentDuplicate
 } from '@mdi/js'
