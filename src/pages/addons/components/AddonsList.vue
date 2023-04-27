@@ -1,6 +1,6 @@
 <template>
-  <div class="d-flex fill-height flex-column">
-    <div class="d-flex align-center gap-1 border-b pb-3">
+  <div class="flex h-100 flex-col">
+    <div class="flex align-center gap-1 border-b pb-3">
       <VIcon class="mt-3 ml-5" icon="$mdiMagnify" size="18"></VIcon>
       <VTextField
         v-model="search"
