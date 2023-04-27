@@ -28,6 +28,7 @@
         v-if="!filteredAddons.length"
         subtitle="Try a different search query"
         title="No addons found matching your search"
+        top=":("
       />
     </div>
   </div>
