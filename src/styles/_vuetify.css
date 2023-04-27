@@ -1,5 +1,5 @@
 /* 👉 Typography */
-p:not(.neutral-color),
+/* p:not(.neutral-color), */
 h1:not(.neutral-color),
 h2:not(.neutral-color),
 h3:not(.neutral-color),
@@ -63,4 +63,8 @@ html,
 /* Ths fixes a strange white underline in text fields while using tailwind */
 .v-field--variant-outlined .v-field__outline__notch {
   border-width: 0 0 0px !important;
+}
+
+.v-btn--variant-text .v-btn__overlay {
+  background-color: unset !important;
 }
