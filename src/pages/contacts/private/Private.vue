@@ -13,9 +13,12 @@
             prepend-inner-icon="$mdiMagnify"
           />
           <VSpacer />
-          <VBtn v-for="btn in ['Bulk Upload', 'Add Contact']" :key="btn" color="green-button">
-            {{ btn }}
-          </VBtn>
+          <VBtn
+            v-for="btn in ['Bulk Upload', 'Add Contact']"
+            :key="btn"
+            :text="btn"
+            color="green-button"
+          />
         </div>
       </VCardText>
       <VDataTable :headers="headers" :items="items" :search="search" hover item-value="name">
