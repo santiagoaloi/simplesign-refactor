@@ -14,7 +14,7 @@
 
         <div class="mt-8">
           <div v-if="!added">
-            <VBtn color="primary" variant="plain"><VIcon icon="$mdiPlus" start /> Add</VBtn>
+            <VBtn color="primary" variant="plain"> Add <VIcon end icon="$mdiPlus" /> </VBtn>
           </div>
         </div>
       </div>
