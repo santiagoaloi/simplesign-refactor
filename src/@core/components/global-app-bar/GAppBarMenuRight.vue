@@ -74,9 +74,7 @@
       </VBadge>
     </div>
   </div>
-  <VBtn v-else icon size="small">
-    <VIcon icon="$mdiMenu" />
-  </VBtn>
+  <VBtn v-else icon="$mdiMenu" size="small" />
 </template>
 
 <script setup>
