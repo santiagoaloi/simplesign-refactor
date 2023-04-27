@@ -10,15 +10,19 @@
     <VContainer>
       <VCard elevation="8" height="800" min-height="800" width="100%">
         <div class="border-b">
-          <div class="pa-4 d-flex gap-2">
-            <h3 class="neutral-color">New Document</h3>
+          <div class="pa-4 d-flex align-center justify-center gap-2">
+            <Tiptap></Tiptap>
+
+            <!-- <h3 class="neutral-color">New Document</h3>
             <div class="text-green-500 cursor-pointer">0.00 USD</div>
             <VSpacer />
-            <VIcon icon="$mdiDotsVertical" />
+            <VIcon icon="$mdiDotsVertical" /> -->
           </div>
         </div>
 
         <VCardText class="fill-height">
+          <div id="editor" />
+
           <Draggable
             :list="store.droppedElements"
             class="fill-height"
