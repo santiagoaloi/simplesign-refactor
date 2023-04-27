@@ -38,7 +38,7 @@ export default {
 
       //Custom vars
       'app-background': '#22272e',
-      'app-typography': '#0062f0',
+      'app-typography': '#ccc',
 
       'medium-emphasis-opacity': 0.68,
 
