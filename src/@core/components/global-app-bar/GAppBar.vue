@@ -1,8 +1,21 @@
 <template>
-  <VAppBar class="px-6" color="appbar-background" height="62">
-    <VSpacer />
-    <GAppBarMenu />
-    <VSpacer />
-    <GAppBarMenuRight />
+  <VAppBar
+    :color="isContentBoxFocused ? 'background' : 'appbar-background'"
+    class="px-6"
+    height="62"
+  >
+    <!-- Content Box (tip-tap) menu is teleported here-->
+    <div id="editor-appbar" />
+
+    <template v-if="!isContentBoxFocused">
+      <VSpacer />
+      <GAppBarMenu />
+      <VSpacer />
+      <GAppBarMenuRight />
+    </template>
   </VAppBar>
 </template>
+
+<script setup>
+const { isContentBoxFocused } = toRefs(useTemplateDraggableStore())
+</script>
