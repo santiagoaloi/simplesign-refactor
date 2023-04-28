@@ -5,7 +5,7 @@
       <MenuBar
         v-if="onEditorFocus"
         :editor="editor"
-        class="d-flex flex-wrap align-center justify-end"
+        class="flex flex-wrap items-center justify-end"
         @mousedown.prevent
       />
     </Teleport>
@@ -31,10 +31,9 @@ import TextStyle from '@tiptap/extension-text-style'
 
 import MenuBar from './TiptapMenu.vue'
 
-const store = useTemplateDraggableStore()
-
 const editor = ref(null)
 const onEditorFocus = ref(false)
+const store = useTemplateDraggableStore()
 
 const emit = defineEmits(['update:modelValue'])
 
@@ -157,10 +156,6 @@ text-decoration: underline;
     background-color: #FAF594;
   }
 
-  img {
-    height: auto;
-    max-width: 100%;
-  }
 
   hr {
     margin: 1rem 0;
@@ -200,10 +195,5 @@ ul[data-type="taskList"] {
     cursor: pointer;
   }  
  }
-}
-
-.ProseMirror-focused {
-  padding: 15px;
-
 }
 </style>
