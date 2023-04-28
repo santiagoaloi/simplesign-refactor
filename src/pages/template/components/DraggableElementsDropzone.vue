@@ -2,7 +2,7 @@
   <Draggable
     :class="{ 'dropzone--hover': store.isDragging }"
     :list="store.droppedElements"
-    class="fill-height overflow-auto no-scrollbar"
+    class="h-100 overflow-auto no-scrollbar"
     ghost-class="ghost"
     group="components"
     handle=".drag-handle"
@@ -10,7 +10,7 @@
   >
     <template #item="{ element }">
       <div>
-        <div class="d-flex justify-end">
+        <div class="flex justify-end">
           <VIcon class="mr-2 drag-handle drag" icon="$mdiDragHorizontal" />
 
           <VMenu offset="15 220" transition="fade-transition">
