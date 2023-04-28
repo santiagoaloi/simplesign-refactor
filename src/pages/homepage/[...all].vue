@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex fill-height align-center justify-center">
+  <div class="flex h-100 items-center justify-center">
     <NotFound
       subtitle="Sorry, we couldn't find your page."
       title="Oops, something went wrong."
