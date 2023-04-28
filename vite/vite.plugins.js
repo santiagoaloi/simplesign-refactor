@@ -107,7 +107,6 @@ export function createVitePlugins() {
       exclude: ['**/components/**', '**/pages/**/stores/**', '**/pages/**/scripts/**']
     }),
 
-    // https://github.com/stafyniaksacha/vite-plugin-fonts
     unfonts({
       // Custom fonts.
       custom: {
