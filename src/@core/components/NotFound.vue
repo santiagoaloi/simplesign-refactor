@@ -5,6 +5,7 @@
     <p>{{ subtitle }}</p>
   </div>
 </template>
+
 <script setup>
 defineProps({
   top: {
