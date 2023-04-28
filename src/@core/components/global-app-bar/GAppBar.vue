@@ -2,6 +2,7 @@
   <VAppBar
     :color="isContentBoxFocused ? 'background' : 'appbar-background'"
     class="px-6"
+    elevation="15"
     height="62"
   >
     <!-- Content Box (tip-tap) menu is teleported here-->

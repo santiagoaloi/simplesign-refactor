@@ -1,5 +1,12 @@
 <template>
-  <VNavigationDrawer :rail="rail" color="drawer" expand-on-hover rail-width="64" width="260">
+  <VNavigationDrawer
+    :rail="rail"
+    color="drawer"
+    elevation="7"
+    expand-on-hover
+    rail-width="64"
+    width="260"
+  >
     <VList class="pa-3 mt-2" nav>
       <div class="d-flex align-center mb-3 justify-between">
         <RouterLink to="/">

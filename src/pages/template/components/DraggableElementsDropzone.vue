@@ -1,5 +1,6 @@
 <template>
   <Draggable
+    :class="{ 'dropzone--hover': store.isDragging }"
     :list="store.droppedElements"
     class="fill-height"
     ghost-class="ghost"
@@ -8,7 +9,7 @@
     item-key="id"
   >
     <template #item="{ element }">
-      <div>
+      <div class="pa-2">
         <div class="d-flex justify-end">
           <VIcon class="mr-2 drag-handle drag" icon="$mdiDragHorizontal" />
 
@@ -73,13 +74,6 @@ const menu = [
       store.deleteElement(element.id)
     }
   }
-  // {
-  //   title: 'Lock',
-  //   icon: '$mdiLockOutline',
-  //   action(element) {
-  //     store.deleteElement()
-  //   }
-  // }
 ]
 
 // Map string names to actual Vuetfiy components.
@@ -116,6 +110,10 @@ onMounted(() => {
 </script>
 
 <style>
+.dropzone--hover {
+ outline: dashed 1px #ccc
+}
+
 .drag {
   cursor: grab;
 }

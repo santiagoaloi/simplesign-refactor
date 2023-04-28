@@ -125,10 +125,15 @@ text-decoration: underline;
 }
 
 
+
+.ProseMirror:focus {
+    outline: none;
+}
+
 /* Basic editor styles */
 .ProseMirror {
   padding: 15px;
-  border: dashed 1px rgba(var(--v-border-color));
+  // border: dashed 1px rgba(var(--v-border-color));
 
 
   code {

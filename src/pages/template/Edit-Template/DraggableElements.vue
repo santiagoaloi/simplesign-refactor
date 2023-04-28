@@ -1,13 +1,14 @@
 <template>
   <div>
     <div class="text-overline">Draggable Elements</div>
-
     <Draggable
       :clone="cloneElement"
       :group="{ name: 'components', pull: 'clone', put: false }"
       :list="droppableComponents"
       class="drag d-flex gap-4"
       item-key="id"
+      @end="store.isDragging = false"
+      @start="store.isDragging = true"
     >
       <template #item="{ element }">
         <div class="d-flex flex-grow-1">
@@ -34,6 +35,8 @@ const droppableComponents = [
   { name: 'Text Field', icon: '$mdiFormatLetterCaseUpper', component: 'VTextField' },
   { name: 'Content Box', icon: '$mdiFormatTextbox', component: 'ContentBox' }
 ]
+
+const store = useTemplateDraggableStore()
 
 let elementCount = 0
 

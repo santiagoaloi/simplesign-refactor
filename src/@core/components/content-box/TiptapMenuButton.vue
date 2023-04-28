@@ -1,12 +1,13 @@
 <template>
-  <button
-    :class="{ 'is-active': isActive ? isActive() : null }"
+  <VBtn
+    :class="{ 'text-primary': isActive ? isActive() : null }"
     :title="title"
-    class="menu-item"
+    class="rounded-0"
+    size="33"
     @click="action"
   >
     <VIcon :icon="icon" />
-  </button>
+  </VBtn>
 </template>
 
 <script>

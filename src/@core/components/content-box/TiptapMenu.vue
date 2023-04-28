@@ -1,11 +1,11 @@
 <template>
   <div>
-    <input
+    <!-- <input
       :value="editor.getAttributes('textStyle').color"
       class="mt-2"
       type="color"
       @input="editor.chain().focus().setColor($event.target.value).run()"
-    />
+    /> -->
 
     <template v-for="(item, index) in items">
       <div v-if="item.type === 'divider'" :key="`divider${index}`" class="divider" />

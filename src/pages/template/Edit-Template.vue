@@ -10,9 +10,16 @@
     <VContainer>
       <VCard elevation="8" height="800" min-height="800" width="100%">
         <VCardText>
-          <div class="d-flex gap-2">
+          <div class="d-flex gap-2 align-center">
             <h4 class="neutral-color">New Document</h4>
             <div class="text-green-500 cursor-pointer">0.00 USD</div>
+            <VSpacer />
+            <VBtn
+              prepend-icon="$mdiTrashCanOutline"
+              size="small"
+              text="Whipe"
+              @click="store.clearElements()"
+            />
           </div>
         </VCardText>
         <VDivider />
@@ -25,3 +32,6 @@
     </VContainer>
   </div>
 </template>
+<script setup>
+const store = useTemplateDraggableStore()
+</script>

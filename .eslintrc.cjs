@@ -7,7 +7,7 @@ module.exports = {
     'plugin:vue/vue3-strongly-recommended',
     'eslint:recommended',
     '@vue/eslint-config-prettier/skip-formatting',
-    './.eslintrc-auto-import.json',
+    './.eslintrc-auto-import.json'
     // 'plugin:tailwindcss/recommended'
   ],
   parserOptions: {
