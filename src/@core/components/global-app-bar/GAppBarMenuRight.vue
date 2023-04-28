@@ -1,9 +1,30 @@
 <template>
   <div v-if="mdAndUp" class="flex items-center fixed right-0 mr-5">
-    <GAppBarThemeSwitch class="mr-3" />
-
     <div class="flex items-center cursor-pointer">
-      <VMenu activator="parent" offset="12 6" transition="fade-transition">
+      <div class="flex text-white cursor-pointer mr-4 align-center">
+        <VMenu activator="parent" offset="20 7" transition="fade-transition">
+          <VList v-model="language" density="compact" nav return-object>
+            <VListItem
+              v-for="item in languages"
+              :key="item.title"
+              :subtitle="item.subtitle"
+              :title="item.title"
+              link
+              @click="language = item"
+            >
+              <template #prepend>
+                <VAvatar :image="item.flag" rounded="0" size="16" />
+              </template>
+            </VListItem>
+          </VList>
+        </VMenu>
+
+        <VAvatar :image="language.flag" class="mr-2" rounded="0" size="16" /> {{ language.title }}
+      </div>
+
+      <GAppBarThemeSwitch class="mr-3" />
+
+      <VMenu offset="12 6" transition="fade-transition">
         <VCard elevation="14" width="300">
           <VListItem title="Profile">
             <template #prepend>
@@ -12,10 +33,12 @@
           </VListItem>
 
           <VCard class="border-t flex flex-col rounded-0 items-center justify-center" height="120">
-            <span class="text-grey-lighten-1">Signature here</span>
+            <div class="d-flex fill-height align-center justify-center text-grey-lighten-1">
+              Signature here
+            </div>
           </VCard>
           <VCard class="border-b flex flex-col rounded-0 align-end justify-center" height="20">
-            <small class="mr-3 mb-2">Change your signature</small>
+            <small class="d-flex mr-3 justify-end">Change your signature</small>
           </VCard>
 
           <div class="border-b">
@@ -36,7 +59,7 @@
               </template>
             </VListItem>
           </div>
-          <div c>
+          <div>
             <VListItem title="Logout">
               <template #prepend>
                 <VIcon icon="$mdiLocationExit" />
@@ -44,31 +67,34 @@
             </VListItem>
           </div>
         </VCard>
-      </VMenu>
+        <template #activator="{ props }">
+          <VBadge
+            v-bind="props"
+            :offset-x="6"
+            :offset-y="3"
+            bordered
+            class="ml-3"
+            color="green"
+            dot
+            location="bottom right"
+          >
+            <div class="flex justify-center align-end flex-col mr-3">
+              <b>Christian N.</b>
+              <small class="mt-1">c.nicolaisen@simplesign.com </small>
+            </div>
 
-      <div class="flex justify-center align-end flex-col mr-0">
-        <b>Christian N.</b>
-        <small class="mt-n1">c.nicolaisen@simplesign.com </small>
-      </div>
-      <VBadge
-        :offset-x="6"
-        :offset-y="3"
-        bordered
-        class="ml-3"
-        color="green"
-        dot
-        location="bottom right"
-      >
-        <VAvatar size="40">
-          <VImg src="/avatars/christian.jpg">
-            <template #placeholder>
-              <div class="flex items-center justify-center h-full">
-                <VProgressCircular color="grey-lighten-4" indeterminate />
-              </div>
-            </template>
-          </VImg>
-        </VAvatar>
-      </VBadge>
+            <VAvatar size="40">
+              <VImg src="/avatars/christian.jpg">
+                <template #placeholder>
+                  <div class="flex items-center justify-center h-full">
+                    <VProgressCircular color="grey-lighten-4" indeterminate />
+                  </div>
+                </template>
+              </VImg>
+            </VAvatar>
+          </VBadge>
+        </template>
+      </VMenu>
     </div>
   </div>
   <VBtn v-else icon="$mdiMenu" size="small" />
@@ -76,6 +102,22 @@
 
 <script setup>
 const { mdAndUp } = useDisplay()
+
+const language = ref({
+  title: 'German',
+  flag: '/flags/germany.gif'
+})
+
+const languages = [
+  {
+    title: 'German',
+    flag: '/flags/germany.gif'
+  },
+  {
+    title: 'French',
+    flag: '/flags/france.gif'
+  }
+]
 
 const firstBlock = [
   {
