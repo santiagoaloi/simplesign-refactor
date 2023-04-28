@@ -1,13 +1,13 @@
 <template>
   <VCard class="rounded-lg dark:border" elevation="5">
-    <div class="flex h-100">
+    <div class="flex h-full">
       <div class="flex flex-col px-6 py-8 w-full">
-        <div class="flex flex-col h-100">
+        <div class="flex flex-col h-full">
           <div class="text-h6 text-secondary">
             {{ title }}
           </div>
 
-          <div class="flex h-100">
+          <div class="flex h-full">
             {{ body }}
           </div>
         </div>
