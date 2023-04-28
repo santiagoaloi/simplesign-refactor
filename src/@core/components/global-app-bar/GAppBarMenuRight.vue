@@ -1,8 +1,8 @@
 <template>
-  <div v-if="mdAndUp" class="d-flex align-center fixed right-0 mr-5">
+  <div v-if="mdAndUp" class="flex items-center fixed right-0 mr-5">
     <GAppBarThemeSwitch class="mr-3" />
 
-    <div class="d-flex align-center cursor-pointer">
+    <div class="flex items-center cursor-pointer">
       <VMenu activator="parent" offset="12 6" transition="fade-transition">
         <VCard elevation="14" width="300">
           <VListItem title="Profile">
@@ -11,13 +11,10 @@
             </template>
           </VListItem>
 
-          <VCard
-            class="border-t d-flex flex-column rounded-0 align-center justify-center"
-            height="120"
-          >
+          <VCard class="border-t flex flex-col rounded-0 items-center justify-center" height="120">
             <span class="text-grey-lighten-1">Signature here</span>
           </VCard>
-          <VCard class="border-b d-flex flex-column rounded-0 align-end justify-center" height="20">
+          <VCard class="border-b flex flex-col rounded-0 align-end justify-center" height="20">
             <small class="mr-3 mb-2">Change your signature</small>
           </VCard>
 
@@ -49,7 +46,7 @@
         </VCard>
       </VMenu>
 
-      <div class="d-flex justify-center align-end flex-column mr-0">
+      <div class="flex justify-center align-end flex-col mr-0">
         <b>Christian N.</b>
         <small class="mt-n1">c.nicolaisen@simplesign.com </small>
       </div>
@@ -65,7 +62,7 @@
         <VAvatar size="40">
           <VImg src="/avatars/christian.jpg">
             <template #placeholder>
-              <div class="d-flex align-center justify-center fill-height">
+              <div class="flex items-center justify-center h-100">
                 <VProgressCircular color="grey-lighten-4" indeterminate />
               </div>
             </template>
