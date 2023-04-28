@@ -1,7 +1,7 @@
 <template>
-  <VContainer class="h-100">
-    <VCard class="h-100 pa-0 rounded-lg border" color="inner-card" elevation="8" width="100%">
-      <VRow class="h-100" no-gutters>
+  <VContainer class="h-full">
+    <VCard class="h-full pa-0 rounded-lg border" color="inner-card" elevation="8" width="100%">
+      <VRow class="h-full" no-gutters>
         <VCol class="border-r dark:border-slate-700" cols="3">
           <VCardText class="px-7 pt-7">
             <VBtn block color="green-button" text="Add new template" to="Edit-Template" />
@@ -66,8 +66,8 @@
             </div>
           </VCardText>
         </VCol>
-        <VCol class="h-100">
-          <div class="flex h-100 flex-col">
+        <VCol class="h-full">
+          <div class="flex h-full flex-col">
             <div class="flex items-center gap-1 border-b pb-3">
               <VIcon class="mt-3 ml-5" icon="$mdiMagnify" size="18" />
 
