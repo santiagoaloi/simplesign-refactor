@@ -2,14 +2,14 @@
   <Draggable
     :class="{ 'dropzone--hover': store.isDragging }"
     :list="store.droppedElements"
-    class="fill-height"
+    class="fill-height overflow-auto no-scrollbar"
     ghost-class="ghost"
     group="components"
     handle=".drag-handle"
     item-key="id"
   >
     <template #item="{ element }">
-      <div class="pa-2">
+      <div>
         <div class="d-flex justify-end">
           <VIcon class="mr-2 drag-handle drag" icon="$mdiDragHorizontal" />
 
