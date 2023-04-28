@@ -16,7 +16,7 @@
             <template v-if="!isDark">
               <VImg class="ml-4" src="/company_logos/simplesign-variant.svg" width="135">
                 <template #placeholder>
-                  <div class="flex items-center justify-center h-100">
+                  <div class="flex items-center justify-center h-full">
                     <VProgressCircular color="grey-lighten-4" indeterminate />
                   </div>
                 </template>
@@ -26,7 +26,7 @@
             <template v-if="isDark">
               <VImg class="ml-4" src="/company_logos/simplesign-variant-dark.png" width="135">
                 <template #placeholder>
-                  <div class="flex items-center justify-center h-100">
+                  <div class="flex items-center justify-center h-full">
                     <VProgressCircular color="grey-lighten-4" indeterminate />
                   </div>
                 </template>
