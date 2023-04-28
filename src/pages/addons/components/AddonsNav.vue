@@ -1,6 +1,6 @@
 <template>
   <VCardText class="px-7 pt-7">
-    <div class="mt-7 d-flex gap-1 cursor-pointer">
+    <div class="mt-7 flex gap-1 cursor-pointer">
       <VIcon icon="$mdiFileDocumentOutline" />
       <div>All add-Ons</div>
     </div>
