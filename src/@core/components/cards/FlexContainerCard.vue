@@ -24,6 +24,7 @@
 }
 
 .card-text {
+  font-size: 1rem;
   @apply h-full
 }
 
