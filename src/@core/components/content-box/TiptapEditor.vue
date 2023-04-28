@@ -10,12 +10,9 @@
       />
     </Teleport>
 
-    <EditorContent
-      ref="editorContent"
-      :editor="editor"
-      @focusin="focusIn()"
-      @focusout="focusOut()"
-    />
+    <div>
+      <EditorContent :editor="editor" @focusin="focusIn()" @focusout="focusOut()" />
+    </div>
   </div>
 </template>
 
