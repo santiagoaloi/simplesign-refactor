@@ -28,7 +28,7 @@
                 <VAvatar v-bind="props" :size="44" class="cursor-pointer">
                   <VImg :src="`/avatars/avatar${i + 1}.jpg`">
                     <template #placeholder>
-                      <div class="flex items-center justify-center h-100">
+                      <div class="flex items-center justify-center h-full">
                         <VProgressCircular color="grey-lighten-4" indeterminate />
                       </div> </template
                   ></VImg>
