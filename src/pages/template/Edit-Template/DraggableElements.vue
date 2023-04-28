@@ -1,28 +1,27 @@
 <template>
-  <div id="draggableElements">
-    <div class="text-overline">Fields</div>
+  <div>
+    <div class="text-overline">Draggable Elements</div>
+
     <Draggable
       :clone="cloneElement"
       :group="{ name: 'components', pull: 'clone', put: false }"
       :list="droppableComponents"
-      class="drag"
+      class="drag d-flex gap-4"
       item-key="id"
     >
       <template #item="{ element }">
-        <VRow>
-          <VCol sm="6">
-            <VCard class="border" color="draggable-items" height="50">
-              <div class="d-flex align-center justify-center fill-height">
-                <VIcon class="mr-4" icon="$mdiDragVertical" />
-                <VSpacer />
+        <div class="d-flex flex-grow-1">
+          <VCard class="border" color="draggable-items" height="50" width="100%">
+            <div class="d-flex align-center justify-center fill-height">
+              <VIcon class="mr-4" icon="$mdiDragVertical" />
+              <VSpacer />
 
-                <small> {{ element.name }}</small>
-                <VSpacer />
-                <VIcon class="mr-4" icon="$mdiFormatLetterCaseUpper" />
-              </div>
-            </VCard>
-          </VCol>
-        </VRow>
+              <small> {{ element.name }}</small>
+              <VSpacer />
+              <VIcon :icon="element.icon" class="mr-4" />
+            </div>
+          </VCard>
+        </div>
       </template>
     </Draggable>
   </div>
@@ -32,7 +31,8 @@ import { v4 as uuidv4 } from 'uuid'
 import Draggable from 'vuedraggable'
 
 const droppableComponents = [
-  { name: 'Text Field', icon: '$mdiFormatLetterCaseUpper', component: 'VTextField' }
+  { name: 'Text Field', icon: '$mdiFormatLetterCaseUpper', component: 'VTextField' },
+  { name: 'Content Box', icon: '$mdiFormatTextbox', component: 'ContentBox' }
 ]
 
 let elementCount = 0
@@ -43,7 +43,7 @@ function cloneElement(element) {
   elementCount += 1
   const cloned = structuredClone(element)
 
-  cloned.value = `Hey there, I'm text field ${elementCount}`
+  cloned.value = `Hey there, I'm element #${elementCount}`
   cloned.label = `Field label  ${elementCount}`
 
   cloned.id = uuidv4()
