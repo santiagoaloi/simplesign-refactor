@@ -5,7 +5,7 @@
         <VAvatar size="35">
           <VImg :src="item.raw.avatar">
             <template #placeholder>
-              <div class="flex items-center justify-center h-100">
+              <div class="flex items-center justify-center h-full">
                 <VProgressCircular color="grey-lighten-4" indeterminate></VProgressCircular>
               </div>
             </template>
