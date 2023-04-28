@@ -1,5 +1,5 @@
 <template>
-  <div class="flex h-100 flex-col">
+  <div class="flex h-full flex-col">
     <div class="flex items-center gap-1 border-b pb-3">
       <VIcon class="mt-3 ml-5" icon="$mdiMagnify" size="18"></VIcon>
       <VTextField
@@ -14,7 +14,7 @@
 
     <div
       :class="{ 'justify-center': !filteredAddons.length }"
-      class="no-scrollbar flex h-100 items-center flex-col overflow-auto"
+      class="no-scrollbar flex h-full items-center flex-col overflow-auto"
     >
       <div class="addon-card-wrapper p-4">
         <AddonCard
