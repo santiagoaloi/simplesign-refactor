@@ -73,6 +73,7 @@
 
               <VTextField
                 v-model="search"
+                bg-color="transparent"
                 density="compact"
                 placeholder="Search Templates"
                 variant="plain"
