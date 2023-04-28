@@ -5,15 +5,15 @@
       :clone="cloneElement"
       :group="{ name: 'components', pull: 'clone', put: false }"
       :list="droppableComponents"
-      class="drag d-flex gap-4"
+      class="drag flex gap-4"
       item-key="id"
       @end="store.isDragging = false"
       @start="store.isDragging = true"
     >
       <template #item="{ element }">
-        <div class="d-flex flex-grow-1">
+        <div class="flex flex-grow-1">
           <VCard class="border" color="draggable-items" height="50" width="100%">
-            <div class="d-flex align-center justify-center fill-height">
+            <div class="flex items-center justify-center h-100">
               <VIcon class="mr-4" icon="$mdiDragVertical" />
               <VSpacer />
 
