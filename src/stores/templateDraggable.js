@@ -1,13 +1,10 @@
-/*
- * General application related logic.
- */
-
 import { v4 as uuidv4 } from 'uuid'
 
 export const useTemplateDraggableStore = defineStore('local-template', {
   state: () => ({
     droppedElements: [],
-    isContentBoxFocused: false
+    isContentBoxFocused: false,
+    isDragging: false
   }),
 
   persist: {
@@ -17,6 +14,10 @@ export const useTemplateDraggableStore = defineStore('local-template', {
   getters: {},
 
   actions: {
+    clearElements() {
+      this.droppedElements = []
+    },
+
     deleteElement(id) {
       this.droppedElements = this.droppedElements.filter((el) => {
         return el.id !== id
