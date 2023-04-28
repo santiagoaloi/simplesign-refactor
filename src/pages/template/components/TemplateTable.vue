@@ -1,8 +1,8 @@
 <template>
   <VDataTable :headers="headers" :items="items" :search="search" hover item-value="name">
     <template #item.document="{ item }">
-      <div class="d-flex align-center">
-        <div class="d-flex flex-column ml-2">
+      <div class="flex items-center">
+        <div class="flex flex-col ml-2">
           <RouterLink to="/">
             <div class="text-secondary">{{ item.raw.document }}</div>
           </RouterLink>
@@ -12,8 +12,8 @@
     </template>
 
     <template #item.shared="{ item }">
-      <div class="d-flex align-center">
-        <div class="d-flex flex-column ml-2">
+      <div class="flex items-center">
+        <div class="flex flex-col ml-2">
           <div class="v-avatar-group">
             <VTooltip
               v-for="(_, i) in 3"
@@ -28,7 +28,7 @@
                 <VAvatar v-bind="props" :size="44" class="cursor-pointer">
                   <VImg :src="`/avatars/avatar${i + 1}.jpg`">
                     <template #placeholder>
-                      <div class="d-flex align-center justify-center fill-height">
+                      <div class="flex items-center justify-center h-100">
                         <VProgressCircular color="grey-lighten-4" indeterminate />
                       </div> </template
                   ></VImg>
