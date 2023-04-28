@@ -5,7 +5,7 @@
       :key="i"
       :ripple="false"
       class="border-b pt-5"
-      @click=""
+      @click="() => {}"
     >
       <template #prepend>
         <VAvatar :color="colors[i]" class="mt-n12" size="small">
