@@ -8,15 +8,15 @@
     width="260"
   >
     <VList class="pa-3 mt-2" nav>
-      <div class="d-flex align-center mb-3 justify-between">
+      <div class="flex items-center mb-3 justify-between">
         <RouterLink to="/">
-          <div class="d-flex">
+          <div class="flex">
             <VImg src="/company_logos/simplesign.svg" width="40" />
 
             <template v-if="!isDark">
               <VImg class="ml-4" src="/company_logos/simplesign-variant.svg" width="135">
                 <template #placeholder>
-                  <div class="d-flex align-center justify-center fill-height">
+                  <div class="flex items-center justify-center h-100">
                     <VProgressCircular color="grey-lighten-4" indeterminate />
                   </div>
                 </template>
@@ -26,7 +26,7 @@
             <template v-if="isDark">
               <VImg class="ml-4" src="/company_logos/simplesign-variant-dark.png" width="135">
                 <template #placeholder>
-                  <div class="d-flex align-center justify-center fill-height">
+                  <div class="flex items-center justify-center h-100">
                     <VProgressCircular color="grey-lighten-4" indeterminate />
                   </div>
                 </template>
