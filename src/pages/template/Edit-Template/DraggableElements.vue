@@ -13,7 +13,7 @@
       <template #item="{ element }">
         <div class="flex flex-grow-1">
           <VCard class="border" color="draggable-items" height="50" width="100%">
-            <div class="flex items-center justify-center h-100">
+            <div class="flex items-center justify-center h-full">
               <VIcon class="mr-4" icon="$mdiDragVertical" />
               <VSpacer />
 
