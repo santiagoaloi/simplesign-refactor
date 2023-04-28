@@ -62,7 +62,7 @@
         <VAvatar size="40">
           <VImg src="/avatars/christian.jpg">
             <template #placeholder>
-              <div class="flex items-center justify-center h-100">
+              <div class="flex items-center justify-center h-full">
                 <VProgressCircular color="grey-lighten-4" indeterminate />
               </div>
             </template>
