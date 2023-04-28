@@ -2,7 +2,7 @@
   <Draggable
     :class="{ 'dropzone--hover': store.isDragging }"
     :list="store.droppedElements"
-    class="h-100 overflow-auto no-scrollbar"
+    class="h-full overflow-auto no-scrollbar"
     ghost-class="ghost"
     group="components"
     handle=".drag-handle"
