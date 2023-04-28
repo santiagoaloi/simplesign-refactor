@@ -4,6 +4,7 @@
       <VIcon class="mt-3 ml-5" icon="$mdiMagnify" size="18"></VIcon>
       <VTextField
         v-model="search"
+        bg-color="transparent"
         color="primary"
         density="compact"
         placeholder="Search Add-Ons"
