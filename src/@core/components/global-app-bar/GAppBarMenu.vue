@@ -9,6 +9,7 @@
               :key="item.title"
               :subtitle="item.subtitle"
               :title="item.title"
+              @click="() => {}"
             >
               <template #prepend>
                 <VAvatar rounded>
