@@ -18,7 +18,7 @@
       </template>
 
       <template #subtitle>
-        <div class="d-flex flex-column">
+        <div class="flex flex-col">
           <div>{{ item.subtitle }}</div>
           <div class="my-3">
             <VAvatar class="mr-4" color="grey-lighten-2" size="20">
