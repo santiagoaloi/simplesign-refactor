@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import { ref } from 'vue'
 import { useDropZone } from '@vueuse/core'
 
@@ -32,7 +32,7 @@ const { isOverDropZone } = useDropZone(dropZoneRef, onDrop)
       >
         <div
           v-if="!filesData.length"
-          class="flex flex-column flex-wrap justify-center items-center h-full"
+          class="flex flex-col flex-wrap justify-center items-center h-full"
         >
           <div class="text-3xl text-secondary">Drop files here or click to upload</div>
           <div class="text-h4 text-secondary mt-4"><VIcon icon="$mdiTrayArrowDown" /></div>
