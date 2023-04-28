@@ -18,7 +18,7 @@
               <VBtn
                 prepend-icon="$mdiTrashCanOutline"
                 size="small"
-                text="Whipe"
+                text="wipe"
                 @click="store.clearElements()"
               />
             </div>
