@@ -10,47 +10,45 @@
   >
     <template #item="{ element }">
       <div>
-        <RouterLink to="/">
-          <div class="flex justify-end">
-            <VIcon class="mr-2 drag-handle drag" icon="$mdiDragHorizontal" />
+        <div class="flex justify-end">
+          <VIcon class="mr-2 drag-handle drag" icon="$mdiDragHorizontal" />
 
-            <VMenu offset="15 220" transition="fade-transition">
-              <template #activator="{ props }">
-                <VIcon
-                  v-bind="props"
-                  class="ml-2 cursor-pointer"
-                  icon=" $mdiDotsVertical"
-                  size="small"
-                />
-              </template>
+          <VMenu offset="15 220" transition="fade-transition">
+            <template #activator="{ props }">
+              <VIcon
+                v-bind="props"
+                class="ml-2 cursor-pointer"
+                icon=" $mdiDotsVertical"
+                size="small"
+              />
+            </template>
 
-              <VCard class="mx-auto" width="240">
-                <VList nav>
-                  <VListItem
-                    v-for="item in menu"
-                    :key="item.title"
-                    :ripple="false"
-                    :title="item.title"
-                    @click="item.action(element)"
-                  >
-                    <template #prepend>
-                      <VAvatar rounded>
-                        <VIcon :icon="item.icon" />
-                      </VAvatar>
-                    </template>
-                  </VListItem>
-                </VList>
-              </VCard>
-            </VMenu>
-          </div>
+            <VCard class="mx-auto" width="240">
+              <VList nav>
+                <VListItem
+                  v-for="item in menu"
+                  :key="item.title"
+                  :ripple="false"
+                  :title="item.title"
+                  @click="item.action(element)"
+                >
+                  <template #prepend>
+                    <VAvatar rounded>
+                      <VIcon :icon="item.icon" />
+                    </VAvatar>
+                  </template>
+                </VListItem>
+              </VList>
+            </VCard>
+          </VMenu>
+        </div>
 
-          <Component
-            :is="getComponent(element.component)"
-            v-model="element.value"
-            v-bind="{ ...getComponentBidings(element) }"
-            class="my-2"
-          />
-        </RouterLink>
+        <Component
+          :is="getComponent(element.component)"
+          v-model="element.value"
+          v-bind="{ ...getComponentBidings(element) }"
+          class="my-2"
+        />
       </div>
     </template>
   </Draggable>
